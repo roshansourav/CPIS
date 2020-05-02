@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+
+    <title>Wlcome to Care Hospital</title>
+    
+    <style type="text/css">
+      ul
+      {
+        float:left;
+        list-style-type: none;
+      }
+      a
+      {
+        text-decoration: none;
+        color: black;
+      }
+      li a:hover,h5 b:hover
+      {
+        text-decoration: none;
+        color:white;
+      }
+      .col-md-5,.col-md-2,.col-md-3
+      {
+        margin-top: 15px;
+      }
+      h5
+      {
+        font-size: medium;
+      }
+      h6
+      {
+        color: black;
+      }
+      h6:hover
+      {
+        color: white;
+      }
+
+      .col-md-3:hover
+      {
+        background-color: skyblue;
+        transition-duration: 0.5s;
+        transform: scale(1.1); 
+        border-radius: 50px;
+        box-shadow: 0 10px 6px -6px black;
+
+      }
+    </style>
+
+<script type="text/javascript" src="../js/time.js"></script>
+
+  </head>
+
+  <body style="background-color: #c3e3e8;" onload="displayTime();">
+	  <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
+	  <link rel="stylesheet" type="text/css" href="../css/hospital.css">
+
+    <!-- ............................................  Header-Section starts here  ...................................... -->
+
+<?php
+include ('../includes/headerNew.php') ;
+?>
+
+
+<!-- ..................................................  Header-section closes here  ................................... -->
+
+	  
+    <div class="container">
+          <div class="panel-heading"></div>
+          <div class="panel-body">
+            <fieldset class="col-md-12">     
+            <legend>Hospital Authority Management</legend>
+            <div class="panel panel-default">
+              <div class="panel-body">
+                
+                <button class="btn btn-info" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><img src="../images/addpatient.png"><br>&nbsp;&nbsp;Add Patient&nbsp;&nbsp;</button>
+
+<div id="id01" class="modal">
+  
+  <form method="POST" class="modal-content animate" action="../functionality/aadhaarcheck.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="../images/aadhar.jpg" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Aadhaar Card Number </b></label>
+      <input type="text" placeholder="Enter Aadhaar" name="nameAadhaar" required>
+        
+      <button type="submit" class="btn btn-info">Submit</button>&nbsp;&nbsp;
+    </div>
+
+  </form>
+</div>
+
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+<!--=========================end add patient==========================================-->
+
+
+
+<button class="btn btn-info" onclick="document.getElementById('id02').style.display='block'" style="width:auto;"><img src="../images/updatereport.png"><br>&nbsp;&nbsp;Update Report&nbsp;&nbsp;</button>
+
+<div id="id02" class="modal">
+  
+  <form method="POST" class="modal-content animate" action="../functionality/aadhaarcheck2.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="../images/aadhar.jpg" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Aadhar Card Number </b></label>
+      <input type="text" placeholder="Enter-Aadhar" name="nmaadhaar" required>
+        
+      <button type="submit" class="btn btn-info">Submit</button>
+    </div>
+
+  </form>
+</div>
+
+<script>
+  // Get the modal
+  var modal = document.getElementById('id02');
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+  </script>
+
+
+
+<!--========================end update report===========================================-->
+
+<button class="btn btn-info" style="width:auto;" onclick="location.href='../html/ard.html'"><a style="color: white; text-decoration-line: none;"><img src="../images/remove.png" ><br>Add / Remove Doctor</a></button>
+
+
+              </div>
+            </div><!--panel panel-default-->
+            </fieldset>       
+            <div class="clearfix"></div>
+          </div><!--panel body-->      
+      </div>
+
+    <link rel="stylesheet" type="text/css" href="css/footer.css"  />
+    
+    <!-- .................................  Footer-section starts here  .............................................. -->
+
+  <?php
+  include ('../includes/footer.php') ;
+?>
+
+  <!-- ..........................................  Footer-section ends here  ...................................... -->
+
+
+  </body>
+</html>

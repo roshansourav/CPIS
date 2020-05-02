@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>add Doctor</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial scale=1.0">
+
+  <style type="text/css">
+    ul
+    {
+      float:left;
+      list-style-type: none;
+      
+    }
+    a
+    {
+      text-decoration: none;
+      color: black;
+    }
+    li a:hover,h5 b:hover
+    {
+      text-decoration: none;
+      color:white;
+    }
+    .col-md-5,.col-md-2,.col-md-3
+    {
+      margin-top: 15px;
+    }
+    h5
+    {
+      font-size: medium;
+    }
+  </style>
+
+  <script type="text/javascript" src="../js/time.js"></script>
+
+</head>
+
+
+<body onload="displayTime();"
+  <!--for bootstrap css-->
+  <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
+  <!--for doctor css-->
+  <link rel="stylesheet" type="text/css" href="../css/addpatient.css">
+
+   <!-- ............................................  Header-Section starts here  ...................................... -->
+
+   <?php
+   include ('../includes/headerNew.php') ;
+ ?>
+
+
+<!-- ..................................................  Header-section closes here  ................................... -->
+
+
+  <br>
+
+  <div class="container">
+    <div class="panel-heading"></div>
+      <div class="panel-body">
+        <fieldset class="col-md-12">     
+          <legend>New Doctor Registration</legend>
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <img src="../images/children.png" style="float: right;">
+                <br><br><br>
+                <div class="form-group">
+                <label for="exampleInputname">Unique ID</label>
+                <input type="number" class="form-control" id="exampleInputName" aria-describedby="nameHelp" placeholder="Unique ID">
+                </div>
+                <div class="form-group">
+                <label for="exampleInputname">First Name</label>
+                <input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp" placeholder="First">
+                </div>
+                <div class="form-group">
+                <label for="exampleInputname">Last Name</label>
+                <input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp" placeholder="Last">
+                </div>
+                <div class="form-group">
+                <label for="exampleInputname">DOB</label>
+                <input type="date" class="form-control" id="exampleInputName" aria-describedby="nameHelp" placeholder="">
+                </div>
+                <div class="form-group">
+                <label for="exampleInputname">Gender</label>
+                <select class="form-control" id="smcId">
+                  <option value="">male</option>
+                  <option value="">female</option>
+                  <option value="">transgender</option>
+                  <option value="">--other--</option>
+                </select>
+                </div>
+                <div class="form-group">
+                <label for="exampleInputname">Mobile Number</label>
+                <input type="number" class="form-control" id="exampleInputName" aria-describedby="nameHelp" placeholder="Mobile">
+                </div>
+                <div class="form-group">
+                <label for="exampleInputname">E-mail</label>
+                <input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputname">Address</label>
+                    <input type="textarea" class="form-control" id="exampleInputName" aria-describedby="nameHelp" placeholder="Address">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputname">Specialization</label>
+                    <select class="form-control" id="smcId">
+                      <option value="">Allergists/Immunologists</option>
+                      <option value="">Anesthesiologists</option>
+                      <option value="">Cardiologists</option>
+                      <option value="">Dermatologists</option>
+                      <option value="">Gastroenterologists</option>
+                      <option value="">Geriatric Medicine Specialists</option>
+                      <option value="">Emergency Medicine Specialists</option>
+                      <option value="">Neurologists</option>
+                      <option value="">Psychiatrists</option>
+                    </select>
+                    </div>
+
+                <button type="submit" class="btn btn-info">Submit</button>
+              </div>
+            </div><!--panel panel-default-->
+        </fieldset>       
+        <div class="clearfix"></div>
+        </div><!--panel body-->      
+  </div>
+  <br>
+
+
+   <!-- .................................  Footer-section starts here  .............................................. -->
+
+   <?php
+   include ('../includes/footer.php') ;
+ ?>
+ 
+   <!-- ..........................................  Footer-section ends here  ...................................... -->
+
+</body>
+</html>

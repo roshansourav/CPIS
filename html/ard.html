@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>add / remove doctor</title>
+
+	<style type="text/css">
+		ul
+		{
+		  float:left;
+		  list-style-type: none;
+		}
+		a
+		{
+		  text-decoration: none;
+		  color: black;
+		}
+		li a:hover,h5 b:hover
+		{
+		  text-decoration: none;
+		  color:white;
+		}
+		.col-md-5,.col-md-2,.col-md-3
+		{
+		  margin-top: 15px;
+		}
+		h5
+		{
+		  font-size: medium;
+		}
+		h6
+		{
+		  color: black;
+		}
+		h6:hover
+		{
+		  color: white;
+		}
+	
+		.col-md-3:hover
+		{
+		  background-color: skyblue;
+		  transition-duration: 0.5s;
+		  transform: scale(1.1); 
+		  border-radius: 50px;
+		  box-shadow: 0 10px 6px -6px black;
+	
+		}
+	  </style>
+	
+	<script type="text/javascript" src="../js/time.js"></script>
+
+</head>
+
+
+<body onload="displayTime();">
+	<!--for bootstrap css-->
+  <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
+  <!--for doctor css-->
+  <link rel="stylesheet" type="text/css" href="../css/ard.css">
+
+  <!-- ............................................  Header-Section starts here  ...................................... -->
+
+<?php
+include ('../includes/headerNew.php') ;
+?>
+
+
+<!-- ..................................................  Header-section closes here  ................................... -->
+<br>
+
+  <div class="container">
+  	<div class="row">
+  		<fieldset class="col-md-6" align="center;">
+  			<legend>Add Doctor</legend>
+  		<div class="col-md-6">
+  			<button class="btn btn-info" style="width:auto;"><a href="../html/addnewdoctor.html" style="color: white; text-decoration-line: none;"><img src="../images/add.png"><br>&nbsp;&nbsp;Add Doctor&nbsp;&nbsp;</a></button>
+  		</div>
+  	</fieldset>
+  	<fieldset class="col-md-6">
+  		<legend>Remove Doctor</legend>
+  		<div class="col-md-6">
+  			<button class="btn btn-info" style="width:auto;" ><a href="../html/removedoctor.html" style="color: white; text-decoration-line: none;"><img src="../images/rdd.png"><br>&nbsp;Remove Doctor&nbsp;</a></button>
+  		</div>
+  	</fieldset>
+  	</div>
+  </div>
+  <br>
+
+  <link rel="stylesheet" type="text/css" href="css/footer.css"  />
+    
+    <!-- .................................  Footer-section starts here  .............................................. -->
+
+  <?php
+  include ('../includes/footer.php') ;
+?>
+
+  <!-- ..........................................  Footer-section ends here  ...................................... -->
+
+</body>
+</html>

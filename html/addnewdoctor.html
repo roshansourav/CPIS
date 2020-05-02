@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Doctor</title>
+
+  <style type="text/css">
+    ul
+    {
+      float:left;
+      list-style-type: none;
+    }
+    a
+    {
+      text-decoration: none;
+      color: black;
+    }
+    li a:hover,h5 b:hover
+    {
+      text-decoration: none;
+      color:white;
+    }
+    .col-md-5,.col-md-2,.col-md-3
+    {
+      margin-top: 15px;
+    }
+    h5
+    {
+      font-size: medium;
+    }
+    h6
+    {
+      color: black;
+    }
+    h6:hover
+    {
+      color: white;
+    }
+
+    .col-md-3:hover
+    {
+      background-color: skyblue;
+      transition-duration: 0.5s;
+      transform: scale(1.1); 
+      border-radius: 50px;
+      box-shadow: 0 10px 6px -6px black;
+
+    }
+  </style>
+
+<script type="text/javascript" src="../js/time.js"></script>
+
+</head>
+
+
+<body onload="displayTime();">
+  <!--for bootstrap css-->
+  <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
+  <!--for doctor css-->
+  <link rel="stylesheet" type="text/css" href="../css/adddoctor.css">
+
+<!-- ............................................  Header-Section starts here  ...................................... -->
+
+<?php
+include ('../includes/headerNew.php') ;
+?>
+
+
+<!-- ..................................................  Header-section closes here  ................................... -->
+
+  <br>
+<form method="POST" action="../functionality/addnewdoctordb.php">
+  <div class="container">
+    <div class="panel-heading"></div>
+      <div class="panel-body">
+        <fieldset class="col-md-12">     
+          <legend>Add Doctor To Hospital</legend>
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <img src="../images/ad.png" style=" width:80px; float: right;">
+                <br><br><br>
+                <div class="form-group">
+                <label for="exampleInputname">Doctor ID</label>
+                <input type="text" class="form-control" name="uniqueid" placeholder="id" required> 
+                </div>
+
+                <div class="form-group">
+                <label for="exampleInputname">First Name</label>
+                <input type="text" class="form-control" name="fname" placeholder="first" required>
+                </div>
+
+                <div class="form-group">
+                <label for="exampleInputname">Last Name</label>
+                <input type="text" class="form-control" name="lname" placeholder="last" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputname">Gender :</label>
+                  &nbsp;&nbsp;&nbsp;                
+                  <select class="form-control" name="gender">
+                    <option value="M">Male</option>
+                    <option value="F">Female</option>
+                    <option value="O">Other</option>
+                  </select> 
+                  </div>
+
+                <div class="form-group">
+                <label for="exampleInputname">Date of Birth</label>
+                <input type="date" class="form-control" name="dob" placeholder="d.o.b" required>
+                </div>
+                
+                <div class="form-group">
+                <label for="exampleInputname">Contact</label>
+                <input type="number" class="form-control" name="contact" placeholder="mobile" required>
+                </div>
+
+                <div class="form-group">
+                <label for="exampleInputname">E-mail</label>
+                <input type="email" class="form-control" name="email" placeholder="email" required>
+                </div>
+
+                <div class="form-group">
+                <label for="exampleInputname">Address</label>
+                <textarea class="form-control" rows="5" name="address" placeholder="Enter address.." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-info">Submit</button>
+              </div>
+            </div><!--panel panel-default-->
+        </fieldset>       
+        <div class="clearfix"></div>
+        </div><!--panel body-->      
+  </div>
+</form>
+  <br>
+
+
+  <link rel="stylesheet" type="text/css" href="css/footer.css"  />
+    
+    <!-- .................................  Footer-section starts here  .............................................. -->
+
+  <?php
+  include ('../includes/footer.php') ;
+?>
+
+  <!-- ..........................................  Footer-section ends here  ...................................... -->
+
+</body>
+</html>

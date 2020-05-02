@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>patient</title>
+    
+    <style type="text/css">
+      ul
+      {
+        float:left;
+        list-style-type: none;  
+      }
+      a
+      {
+        text-decoration: none;
+        color: black;
+      }
+      li a:hover,h5 b:hover
+      {
+        text-decoration: none;
+        color:white;
+      }
+      .col-md-5,.col-md-2,.col-md-3
+      {
+        margin-top: 15px;
+      }
+      h5
+      {
+        font-size: medium;
+      }
+    </style>
+
+    <script>
+      function funEmailMobile(id)
+      {
+        if(id == "idMobile")
+        {
+          document.getElementById("emailPhone").placeholder = "Enter mobile no."
+        }
+        else if(id == "idEmail")
+        {
+          document.getElementById("emailPhone").placeholder = "Enter email"
+        }
+      }
+
+
+      function checkField()
+    {
+      var aadhaar = document.getElementById('aadhaar').value.trim();
+      if(aadhaar == "" || aadhaar == null)
+      {
+        return false;
+      }
+      else
+      {
+        return true;
+      }
+    }
+    
+    </script>
+
+    <script type="text/javascript" src="../js/time.js"></script>
+   
+
+  </head>
+  
+  <body onload="displayTime();">
+	  <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
+	  <link rel="stylesheet" type="text/css" href="../css/patient.css">
+
+    <!-- ............................................. Header-Section starts here .................................... -->
+
+    <?php
+    include ('../includes/headerNew.php') ;
+  ?>
+
+    <!-- ............................................ Header-Section Ends Here ......................................... -->
+
+
+    <br>
+
+	  <div class="container">
+		  <div class="row">
+			  <div class="col-md-6">
+				  <div class="card" style="width: 450px;">
+  					<img src="../images/p1.jpeg" style="width: 430px; height: 300px; border-radius: 5px; align-self: center; padding-top: 8px;">
+  					<div class="card-body">
+   					  <p class="card-text"><b>Healthcare</b> is the right of every individual but lack of quality infrastructure, dearth of qualified medical functionaries, and non- access to basic medicines and medical facilities thwarts its reach to 60% of population in India. <br><b>A majority</b> of 700 million people lives in rural areas where the condition of medical facilities is deplorable. Considering the picture of grim facts there is a dire need of new practices and procedures to ensure that quality and timely healthcare reaches the deprived corners of the Indian villages.
+					    </p>
+  					</div>
+				  </div>
+			  </div><!--col md 6-->
+
+				<div class="col-md-6">
+		      <h2>Search Patient's data</h2><br/>
+  			  <div class="panel panel-success">
+    			  <div class="panel-heading">Search by Voice</div><br>
+   				  <div class="panel-body">
+   					  <form class="form-inline my-2 my-lg-0">
+      				  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="width: 300px;">
+     				    <button class="btn btn-info" type="submit">Search</button>
+   					  </form><br><hr><br>
+<!-- .............................................................. -->
+               <form onsubmit="return checkField();">
+   					  <div class="panel-heading"><h4>Search by UID:Card</h4></div><br>
+   					  <div class="form-group">
+         			  <label for="exampleInputname">Aadhar card no. : </label>
+         			  <input type="text" class="form-control" id="aadhaar" placeholder="Enter aadhar">
+              </div>
+              <br>
+        		  <div class="form-group">
+                  <label class="radio-inline">
+                    <input type="radio" name="optradio" checked id="idMobile" onclick="funEmailMobile(id);">Mobile No.
+                  </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <label class="radio-inline">
+                    <input type="radio" name="optradio" id="idEmail" onclick="funEmailMobile(id);">Email
+                  </label>
+         			  <input type="text" class="form-control" id="emailPhone" aria-describedby="nameHelp" placeholder="Enter mobile no.">
+              </div>
+              
+              <div>
+                  <button class="btn btn-info" type="submit">Get OTP</button>
+              </div>
+              <br>
+
+
+        		  <div class="form-group">
+         			  <label for="exampleInputname">Enter OTP : </label>
+         			  <input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp" placeholder="">
+        		  </div>
+        		  <button class="btn btn-info" type="submit" >Submit</button>
+
+             </div>
+            </form>
+   			  </div>
+   		  </div>
+  	  </div>
+
+	  </div><!--for container--><br>
+
+	  <link rel="stylesheet" type="text/css" href="css/footer.css"  />
+  
+    
+    <!-- ........................................  Footer-Section starts here  ..................................... -->
+
+    <?php
+    include ('../includes/footer.php') ;
+  ?>
+
+    <!-- ........................................  Footer-Section ends here  ......................................... -->
+
+  </body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+
+    <title></title>
+    
+    <style type="text/css">
+      ul
+      {
+        float:left;
+        list-style-type: none;
+      }
+      a
+      {
+        text-decoration: none;
+        color: black;
+      }
+      li a:hover,h5 b:hover
+      {
+        text-decoration: none;
+        color:white;
+      }
+      .col-md-5,.col-md-2,.col-md-3
+      {
+        margin-top: 15px;
+      }
+      h5
+      {
+        font-size: medium;
+      }
+      .col-md-3:hover
+      {
+        background-color: honeydew;
+        transition-duration: 0.5s;
+        transform: scale(1.1); 
+        border-radius: 16px;
+        box-shadow: 0 10px 6px -6px black;
+
+      }
+    </style>
+
+    <script type="text/javascript" src="../js/time.js"></script>
+
+    
+
+  </head>
+
+  <body style="background-color: #c3e3e8;" onload="displayTime();">
+    
+	  <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
+	  <link rel="stylesheet" type="text/css" href="../css/index.css">
+
+    <!-- .....................................  Header codes start here  ................................................... -->
+
+    <?php
+    include ('../includes/header.php') ;
+  ?>
+<!-- .............................................  Header codes end here ..................................................... -->
+    <br><br>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3" onclick="location.href='patient.html'">
+          <div class="thumbnail tk"><img src="../images/patient1.png"></div><br>
+          <h4>Patient</h4>
+          <p>Finding your disease or is quick appointment. Create your solutions.</p>
+          <a href="#" class="readmore">View Details</a><hr>
+        </div><!-- end of col-md-4 -->
+
+        <div class="col-md-3" onclick="location.href='doctor.php'">
+          <div class="thumbnail tk"><img src="../images/doctor1.png"></div><br>
+          <h4>Doctor</h4>
+          <p>We manually validate every patient to ensure you the best.</p>
+          <a href="#" class="readmore">View Details</a><hr>
+        </div><!-- end of col-md-4 -->
+
+        <div class="col-md-3" onclick="location.href='stakeholder.html'">
+          <div class="thumbnail tk"><img src="../images/stakeholder.png"></div><br>
+          <h4>Stakeholder</h4>
+          <p>We manually provided every human to ensure insurance best.</p>
+          <a href="#" class="readmore">View Details</a><hr>
+        </div><!-- end of col-md-4 -->
+
+        <div class="col-md-3" onclick="location.href='hospitallogin.php'">
+          <div class="thumbnail tk"><img src="../images/hospital.png"></div><br>
+          <h4>Hospital</h4>
+          <p>Our dedicated service team help to you every step of the way.</p>
+          <a href="#" class="readmore">View Details</a><hr>
+        </div><!-- end of col-md-4 -->
+      </div><!--end of row--><br><br>
+    </div>
+    <br><br>
+
+    <link rel="stylesheet" type="text/css" href="css/footer.css"  />
+    
+    <!-- ..................................  Footer-Section starts here .............................................. -->
+
+    <?php
+    include ('../includes/footer.php') ;
+  ?>
+
+    <!-- ........................................  Footer-Section ends here  ......................................... -->
+
+
+
+  </body>
+</html>

@@ -1,0 +1,17 @@
+.container img 
+{
+	width: 100px;
+	height: 100px;
+}
+.container
+{
+	text-align: center;
+}
+.container,.thumbnail.tk a:hover
+{
+	color:black;
+}
+.container a
+{
+	text-decoration-line: none;
+}
